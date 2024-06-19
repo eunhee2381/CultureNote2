@@ -16,6 +16,12 @@
 		E3B363472C1F419300BFCB2F /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B363462C1F419300BFCB2F /* MoviesViewController.swift */; };
 		E3B3634B2C1F41BD00BFCB2F /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3634A2C1F41BD00BFCB2F /* MovieDetailViewController.swift */; };
 		E3B3634D2C1F430B00BFCB2F /* MovieAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3634C2C1F430B00BFCB2F /* MovieAddEditViewController.swift */; };
+		E3BF2D242C229ECF004A4C2F /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BF2D232C229ECF004A4C2F /* BooksViewController.swift */; };
+		E3BF2D262C229EE0004A4C2F /* BooksAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BF2D252C229EE0004A4C2F /* BooksAddEditViewController.swift */; };
+		E3BF2D282C229F1A004A4C2F /* PerformsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BF2D272C229F1A004A4C2F /* PerformsViewController.swift */; };
+		E3BF2D2A2C229F2B004A4C2F /* PerformsAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BF2D292C229F2B004A4C2F /* PerformsAddEditViewController.swift */; };
+		E3BF2D2C2C229F48004A4C2F /* ExhibitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BF2D2B2C229F48004A4C2F /* ExhibitsViewController.swift */; };
+		E3BF2D2E2C229F56004A4C2F /* ExhibitsAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BF2D2D2C229F56004A4C2F /* ExhibitsAddEditViewController.swift */; };
 		E3C2D7A22C202E5D008B80ED /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2D7A12C202E5D008B80ED /* Movie.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +37,12 @@
 		E3B363462C1F419300BFCB2F /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		E3B3634A2C1F41BD00BFCB2F /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		E3B3634C2C1F430B00BFCB2F /* MovieAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAddEditViewController.swift; sourceTree = "<group>"; };
+		E3BF2D232C229ECF004A4C2F /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		E3BF2D252C229EE0004A4C2F /* BooksAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAddEditViewController.swift; sourceTree = "<group>"; };
+		E3BF2D272C229F1A004A4C2F /* PerformsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformsViewController.swift; sourceTree = "<group>"; };
+		E3BF2D292C229F2B004A4C2F /* PerformsAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformsAddEditViewController.swift; sourceTree = "<group>"; };
+		E3BF2D2B2C229F48004A4C2F /* ExhibitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitsViewController.swift; sourceTree = "<group>"; };
+		E3BF2D2D2C229F56004A4C2F /* ExhibitsAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitsAddEditViewController.swift; sourceTree = "<group>"; };
 		E3C2D7A12C202E5D008B80ED /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +87,12 @@
 				E3B3634C2C1F430B00BFCB2F /* MovieAddEditViewController.swift */,
 				E3B3634A2C1F41BD00BFCB2F /* MovieDetailViewController.swift */,
 				E3C2D7A12C202E5D008B80ED /* Movie.swift */,
+				E3BF2D232C229ECF004A4C2F /* BooksViewController.swift */,
+				E3BF2D252C229EE0004A4C2F /* BooksAddEditViewController.swift */,
+				E3BF2D272C229F1A004A4C2F /* PerformsViewController.swift */,
+				E3BF2D292C229F2B004A4C2F /* PerformsAddEditViewController.swift */,
+				E3BF2D2B2C229F48004A4C2F /* ExhibitsViewController.swift */,
+				E3BF2D2D2C229F56004A4C2F /* ExhibitsAddEditViewController.swift */,
 			);
 			name = Calander;
 			path = CultureNote;
@@ -151,13 +169,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BF2D282C229F1A004A4C2F /* PerformsViewController.swift in Sources */,
 				E3C2D7A22C202E5D008B80ED /* Movie.swift in Sources */,
+				E3BF2D2C2C229F48004A4C2F /* ExhibitsViewController.swift in Sources */,
+				E3BF2D242C229ECF004A4C2F /* BooksViewController.swift in Sources */,
 				E3B3634D2C1F430B00BFCB2F /* MovieAddEditViewController.swift in Sources */,
 				E3043AEF2C1D89FE0076D650 /* ViewController.swift in Sources */,
+				E3BF2D2E2C229F56004A4C2F /* ExhibitsAddEditViewController.swift in Sources */,
+				E3BF2D2A2C229F2B004A4C2F /* PerformsAddEditViewController.swift in Sources */,
 				E3043AEB2C1D89FE0076D650 /* AppDelegate.swift in Sources */,
 				E3043AED2C1D89FE0076D650 /* SceneDelegate.swift in Sources */,
 				E3B3634B2C1F41BD00BFCB2F /* MovieDetailViewController.swift in Sources */,
 				E3B363472C1F419300BFCB2F /* MoviesViewController.swift in Sources */,
+				E3BF2D262C229EE0004A4C2F /* BooksAddEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

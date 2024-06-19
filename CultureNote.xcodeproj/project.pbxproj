@@ -13,6 +13,9 @@
 		E3043AF22C1D89FE0076D650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3043AF02C1D89FE0076D650 /* Main.storyboard */; };
 		E3043AF42C1D8A000076D650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3043AF32C1D8A000076D650 /* Assets.xcassets */; };
 		E3043AF72C1D8A000076D650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3043AF52C1D8A000076D650 /* LaunchScreen.storyboard */; };
+		E39871E92C231E1F00A6C39F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39871E82C231E1F00A6C39F /* Book.swift */; };
+		E39871EB2C23200200A6C39F /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39871EA2C23200200A6C39F /* Perform.swift */; };
+		E39871ED2C23218500A6C39F /* Exhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39871EC2C23218500A6C39F /* Exhibit.swift */; };
 		E3B363472C1F419300BFCB2F /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B363462C1F419300BFCB2F /* MoviesViewController.swift */; };
 		E3B3634B2C1F41BD00BFCB2F /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3634A2C1F41BD00BFCB2F /* MovieDetailViewController.swift */; };
 		E3B3634D2C1F430B00BFCB2F /* MovieAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3634C2C1F430B00BFCB2F /* MovieAddEditViewController.swift */; };
@@ -39,6 +42,9 @@
 		E3043AF32C1D8A000076D650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3043AF62C1D8A000076D650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3043AF82C1D8A000076D650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E39871E82C231E1F00A6C39F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		E39871EA2C23200200A6C39F /* Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perform.swift; sourceTree = "<group>"; };
+		E39871EC2C23218500A6C39F /* Exhibit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exhibit.swift; sourceTree = "<group>"; };
 		E3B363462C1F419300BFCB2F /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		E3B3634A2C1F41BD00BFCB2F /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		E3B3634C2C1F430B00BFCB2F /* MovieAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAddEditViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,9 @@
 				E3BF2D2F2C22A860004A4C2F /* GoogleService-Info.plist */,
 				E3BF2D372C22ADF9004A4C2F /* Database.swift */,
 				E3BF2D392C22AEEB004A4C2F /* DbFirebase.swift */,
+				E39871E82C231E1F00A6C39F /* Book.swift */,
+				E39871EA2C23200200A6C39F /* Perform.swift */,
+				E39871EC2C23218500A6C39F /* Exhibit.swift */,
 			);
 			name = Calander;
 			path = CultureNote;
@@ -198,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39871E92C231E1F00A6C39F /* Book.swift in Sources */,
 				E3BF2D282C229F1A004A4C2F /* PerformsViewController.swift in Sources */,
 				E3C2D7A22C202E5D008B80ED /* Movie.swift in Sources */,
 				E3BF2D2C2C229F48004A4C2F /* ExhibitsViewController.swift in Sources */,
@@ -206,11 +216,13 @@
 				E3043AEF2C1D89FE0076D650 /* ViewController.swift in Sources */,
 				E3BF2D2E2C229F56004A4C2F /* ExhibitsAddEditViewController.swift in Sources */,
 				E3BF2D2A2C229F2B004A4C2F /* PerformsAddEditViewController.swift in Sources */,
+				E39871ED2C23218500A6C39F /* Exhibit.swift in Sources */,
 				E3BF2D3A2C22AEEB004A4C2F /* DbFirebase.swift in Sources */,
 				E3043AEB2C1D89FE0076D650 /* AppDelegate.swift in Sources */,
 				E3043AED2C1D89FE0076D650 /* SceneDelegate.swift in Sources */,
 				E3B3634B2C1F41BD00BFCB2F /* MovieDetailViewController.swift in Sources */,
 				E3B363472C1F419300BFCB2F /* MoviesViewController.swift in Sources */,
+				E39871EB2C23200200A6C39F /* Perform.swift in Sources */,
 				E3BF2D382C22ADF9004A4C2F /* Database.swift in Sources */,
 				E3BF2D262C229EE0004A4C2F /* BooksAddEditViewController.swift in Sources */,
 			);

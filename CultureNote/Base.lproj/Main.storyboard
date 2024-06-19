@@ -38,8 +38,9 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gu-jk-X1l">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <color key="backgroundColor" red="0.32200144860000002" green="0.65714362690000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="영화" id="jD1-PB-qNz">
+                                    <navigationItem title="영화 목록" id="jD1-PB-qNz">
                                         <barButtonItem key="rightBarButtonItem" title="추가" id="e1v-Wv-aBI">
                                             <connections>
                                                 <segue destination="ehg-bH-mAM" kind="presentation" id="yMv-U4-4zP"/>
@@ -118,6 +119,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r36-kS-Gec">
                                 <rect key="frame" x="-3" y="59" width="395" height="44"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <items>
                                     <navigationItem title="도서 목록" id="BnT-nX-dBW">
                                         <barButtonItem key="rightBarButtonItem" title="추가" id="68R-FS-TQG">
@@ -161,15 +163,20 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FL8-Wz-u0W">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <items>
                                     <navigationItem title="도서 추가" id="NVi-eH-q6M">
                                         <barButtonItem key="leftBarButtonItem" title="취소" id="R4m-t7-drx"/>
-                                        <barButtonItem key="rightBarButtonItem" title="저장" id="unU-bG-nDe"/>
+                                        <barButtonItem key="rightBarButtonItem" title="저장" id="unU-bG-nDe">
+                                            <connections>
+                                                <action selector="savingBook:" destination="EdY-ba-zqE" id="uGx-dh-puO"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9T-U3-Wko">
-                                <rect key="frame" x="0.0" y="59" width="393" height="724"/>
+                                <rect key="frame" x="0.0" y="66" width="393" height="717"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xTp-H9-eXe">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="776"/>
@@ -302,6 +309,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="이미지 선택">
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="bookImageButton:" destination="EdY-ba-zqE" eventType="touchUpInside" id="l4q-2n-t6v"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -342,9 +352,18 @@
                             <constraint firstItem="u9T-U3-Wko" firstAttribute="trailing" secondItem="iR6-dI-bKi" secondAttribute="trailing" id="SZU-Zb-MSa"/>
                             <constraint firstItem="u9T-U3-Wko" firstAttribute="bottom" secondItem="iR6-dI-bKi" secondAttribute="bottom" id="Vew-ah-nox"/>
                             <constraint firstItem="FL8-Wz-u0W" firstAttribute="leading" secondItem="NlP-jp-lcs" secondAttribute="leading" id="eBn-v5-nms" userLabel="Navigation Bar.leading = Safe Area.leading"/>
-                            <constraint firstItem="u9T-U3-Wko" firstAttribute="top" secondItem="iR6-dI-bKi" secondAttribute="top" id="tk5-ah-VsK" userLabel="Scroll View.top = Navigation Bar.bottom"/>
+                            <constraint firstItem="u9T-U3-Wko" firstAttribute="top" secondItem="FL8-Wz-u0W" secondAttribute="bottom" constant="10" id="tk5-ah-VsK" userLabel="Scroll View.top = Navigation Bar.bottom"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookAuthorTextField" destination="wJe-6y-pj4" id="2NX-YU-hvN"/>
+                        <outlet property="bookEndDatePicker" destination="1Rn-0z-Cs0" id="Rg9-d7-dCM"/>
+                        <outlet property="bookImageView" destination="Koe-W9-n95" id="K9Y-YY-Pl5"/>
+                        <outlet property="bookPublishTextField" destination="qth-rZ-lqr" id="db2-hj-9IZ"/>
+                        <outlet property="bookReviewTextView" destination="BHu-wK-d4f" id="KH4-58-5iw"/>
+                        <outlet property="bookStartDatePicker" destination="kPy-pd-w0T" id="W90-0S-D8L"/>
+                        <outlet property="bookTitleTextField" destination="6lG-jp-Z5V" id="tSF-MK-bbk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAi-Wu-ymc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,6 +394,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fko-tl-z9L">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <color key="backgroundColor" red="0.92128556966781616" green="0.36436926306007622" blue="0.80811732271650594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <navigationItem title="공연 목록" id="WrZ-7e-E0J">
                                         <barButtonItem key="rightBarButtonItem" title="추가" id="5lY-cV-qWR">
@@ -418,7 +438,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Y2-Bv-VU4">
-                                <rect key="frame" x="0.0" y="103" width="393" height="680"/>
+                                <rect key="frame" x="0.0" y="113" width="393" height="670"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ihn-KB-dGS">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="744"/>
@@ -572,6 +592,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="이미지 업로드">
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="performPosterButton:" destination="Ws1-pk-dnQ" eventType="touchUpInside" id="Srg-ZA-NIj"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -603,14 +626,19 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="t8D-Y9-TPy"/>
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-Rk-BLJ">
-                                <rect key="frame" x="-1" y="48" width="394" height="44"/>
+                                <rect key="frame" x="-1" y="59" width="394" height="44"/>
+                                <color key="backgroundColor" red="0.92128556969999997" green="0.36436926310000001" blue="0.80811732270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4mU-5f-8gU"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="공연 추가" id="yaS-3i-XGa">
                                         <barButtonItem key="leftBarButtonItem" title="취소" id="kSd-0b-OgA"/>
-                                        <barButtonItem key="rightBarButtonItem" title="저장" id="vnh-cJ-e1f"/>
+                                        <barButtonItem key="rightBarButtonItem" title="저장" id="vnh-cJ-e1f">
+                                            <connections>
+                                                <action selector="savingPerform:" destination="Ws1-pk-dnQ" id="ozN-VW-XP0"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -619,14 +647,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="8Y2-Bv-VU4" secondAttribute="bottom" id="2CO-aC-jCl"/>
-                            <constraint firstItem="eTp-Rk-BLJ" firstAttribute="top" secondItem="CRD-hx-H3q" secondAttribute="top" constant="-11" id="9gb-FC-4CR"/>
+                            <constraint firstItem="eTp-Rk-BLJ" firstAttribute="top" secondItem="CRD-hx-H3q" secondAttribute="top" id="9gb-FC-4CR"/>
                             <constraint firstItem="8Y2-Bv-VU4" firstAttribute="leading" secondItem="CRD-hx-H3q" secondAttribute="leading" id="Ai2-Ex-d3O"/>
                             <constraint firstItem="eTp-Rk-BLJ" firstAttribute="leading" secondItem="2fJ-PL-Kjl" secondAttribute="leadingMargin" constant="-17" id="BbU-DU-m5t" userLabel="Navigation Bar.leading = Safe Area.leading"/>
-                            <constraint firstItem="8Y2-Bv-VU4" firstAttribute="top" secondItem="eTp-Rk-BLJ" secondAttribute="bottom" constant="11" id="jPU-EK-FmO"/>
+                            <constraint firstItem="8Y2-Bv-VU4" firstAttribute="top" secondItem="eTp-Rk-BLJ" secondAttribute="bottom" constant="10" id="jPU-EK-FmO"/>
                             <constraint firstItem="CRD-hx-H3q" firstAttribute="trailing" secondItem="eTp-Rk-BLJ" secondAttribute="trailing" id="jzZ-Ss-7tn" userLabel="Safe Area.trailing = Navigation Bar.trailing"/>
                             <constraint firstAttribute="trailing" secondItem="8Y2-Bv-VU4" secondAttribute="trailing" id="olc-pR-JOe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="performDatePicker" destination="XWI-rL-urf" id="m8S-pk-R0m"/>
+                        <outlet property="performGenreTextField" destination="fkK-Yb-ztK" id="4Rb-Rk-urc"/>
+                        <outlet property="performPosterImageView" destination="gLh-hT-Tls" id="5tf-df-yht"/>
+                        <outlet property="performPriceTextField" destination="d5Y-ES-H2i" id="oWG-4x-c7k"/>
+                        <outlet property="performReviewTextView" destination="gUD-pj-WQ7" id="vsG-6x-rJw"/>
+                        <outlet property="performSeatTextField" destination="XGh-Tp-Wgc" id="qd1-XF-5SS"/>
+                        <outlet property="performTheaterTextField" destination="uJz-2O-lVk" id="KG0-Oz-x7Z"/>
+                        <outlet property="performTitleTextField" destination="PPa-gL-gIV" id="VTx-qC-QtM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DTh-dp-uDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -642,6 +680,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhk-AB-Zcs">
                                 <rect key="frame" x="-1" y="59" width="391" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <items>
                                     <navigationItem title="전시 목록" id="bHf-RR-Qja">
                                         <barButtonItem key="rightBarButtonItem" title="추가" id="HhM-QN-nbG">
@@ -684,20 +723,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV1-vo-HXi">
-                                <rect key="frame" x="-5" y="59" width="394" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="eSd-oa-2mz"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="전시 추기" id="8fy-nO-omr">
-                                        <barButtonItem key="leftBarButtonItem" title="취소" id="BXZ-Pf-fEr"/>
-                                        <barButtonItem key="rightBarButtonItem" title="저장" id="Khf-UL-1TG"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTU-Km-xk2">
-                                <rect key="frame" x="0.0" y="162" width="393" height="621"/>
+                                <rect key="frame" x="0.0" y="113" width="393" height="670"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JxR-Xt-wIQ">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="740"/>
@@ -712,7 +739,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전시회 명" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hve-aS-d4f">
-                                                        <rect key="frame" x="73.333333333333314" y="0.0" width="319.66666666666669" height="44"/>
+                                                        <rect key="frame" x="73.333333333333343" y="0.0" width="319.66666666666663" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -731,7 +758,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="작가" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2QY-Fd-lHW">
-                                                        <rect key="frame" x="39.666666666666686" y="0.0" width="353.33333333333331" height="44"/>
+                                                        <rect key="frame" x="39.666666666666657" y="0.0" width="353.33333333333337" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -750,7 +777,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="veR-9I-yuf">
-                                                        <rect key="frame" x="39.666666666666686" y="0.0" width="353.33333333333331" height="44"/>
+                                                        <rect key="frame" x="39.666666666666657" y="0.0" width="353.33333333333337" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -824,12 +851,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF7-Se-APs">
-                                                        <rect key="frame" x="102.66666666666669" y="0.0" width="290.33333333333331" height="44"/>
+                                                        <rect key="frame" x="102.66666666666666" y="0.0" width="290.33333333333337" height="44"/>
                                                         <color key="backgroundColor" red="0.46432499690000001" green="0.73778948160000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="이미지 선택">
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="exhibitPosterButton:" destination="SMd-b0-hbG" eventType="touchUpInside" id="P5J-qr-VlW"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -846,28 +876,54 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="JxR-Xt-wIQ" firstAttribute="leading" secondItem="2pV-MC-pgF" secondAttribute="leading" id="Idw-yL-F38"/>
-                                    <constraint firstAttribute="bottom" secondItem="JxR-Xt-wIQ" secondAttribute="bottom" id="tLC-aU-kgd"/>
-                                    <constraint firstItem="JxR-Xt-wIQ" firstAttribute="top" secondItem="2pV-MC-pgF" secondAttribute="top" id="tbh-6h-uKu"/>
-                                    <constraint firstAttribute="trailing" secondItem="JxR-Xt-wIQ" secondAttribute="trailing" id="ycb-od-cZr"/>
-                                    <constraint firstItem="JxR-Xt-wIQ" firstAttribute="width" secondItem="2pV-MC-pgF" secondAttribute="width" id="zDt-m1-zbd"/>
+                                    <constraint firstItem="JxR-Xt-wIQ" firstAttribute="leading" secondItem="uTU-Km-xk2" secondAttribute="leading" id="JXS-oJ-Jst"/>
+                                    <constraint firstItem="JxR-Xt-wIQ" firstAttribute="width" secondItem="2pV-MC-pgF" secondAttribute="width" id="V7V-kZ-XFS"/>
+                                    <constraint firstAttribute="trailing" secondItem="JxR-Xt-wIQ" secondAttribute="trailing" id="epj-1x-Gi0"/>
+                                    <constraint firstItem="JxR-Xt-wIQ" firstAttribute="top" secondItem="2pV-MC-pgF" secondAttribute="top" id="hde-Ib-kFa"/>
+                                    <constraint firstAttribute="bottom" secondItem="JxR-Xt-wIQ" secondAttribute="bottom" id="sZy-hT-iqM"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="JQ6-Dh-u5u"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="2pV-MC-pgF"/>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV1-vo-HXi">
+                                <rect key="frame" x="0.0" y="59" width="377" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eSd-oa-2mz"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="전시 추가" id="8fy-nO-omr">
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="BXZ-Pf-fEr"/>
+                                        <barButtonItem key="rightBarButtonItem" title="저장" id="Khf-UL-1TG">
+                                            <connections>
+                                                <action selector="savingExhibit:" destination="SMd-b0-hbG" id="t5c-3V-ZQX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mw6-H4-Wg2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uTU-Km-xk2" firstAttribute="leading" secondItem="Fp6-RS-U71" secondAttribute="leading" id="QD6-EW-WLl"/>
-                            <constraint firstItem="mw6-H4-Wg2" firstAttribute="bottom" secondItem="uTU-Km-xk2" secondAttribute="bottom" id="bDX-4X-i6e"/>
-                            <constraint firstItem="mw6-H4-Wg2" firstAttribute="trailing" secondItem="OV1-vo-HXi" secondAttribute="trailing" constant="4" id="fWP-gO-6Cw"/>
-                            <constraint firstItem="OV1-vo-HXi" firstAttribute="leading" secondItem="Fp6-RS-U71" secondAttribute="leadingMargin" constant="-21" id="gbp-i5-Zfo"/>
-                            <constraint firstItem="mw6-H4-Wg2" firstAttribute="trailing" secondItem="uTU-Km-xk2" secondAttribute="trailing" id="jdZ-tz-fnU"/>
-                            <constraint firstItem="uTU-Km-xk2" firstAttribute="top" secondItem="OV1-vo-HXi" secondAttribute="bottom" constant="59" id="v6y-C6-WMF"/>
-                            <constraint firstItem="OV1-vo-HXi" firstAttribute="top" secondItem="mw6-H4-Wg2" secondAttribute="top" id="vP2-xx-DXY"/>
+                            <constraint firstItem="uTU-Km-xk2" firstAttribute="bottom" secondItem="mw6-H4-Wg2" secondAttribute="bottom" id="0Jl-fi-O4f"/>
+                            <constraint firstItem="OV1-vo-HXi" firstAttribute="leading" secondItem="uTU-Km-xk2" secondAttribute="leading" id="Feq-Tl-O6x"/>
+                            <constraint firstItem="uTU-Km-xk2" firstAttribute="leading" secondItem="mw6-H4-Wg2" secondAttribute="leading" id="MMR-23-pwt"/>
+                            <constraint firstItem="OV1-vo-HXi" firstAttribute="top" secondItem="mw6-H4-Wg2" secondAttribute="top" id="O83-15-ZLD"/>
+                            <constraint firstItem="OV1-vo-HXi" firstAttribute="trailing" secondItem="Fp6-RS-U71" secondAttribute="trailingMargin" id="c9y-kn-nQI"/>
+                            <constraint firstItem="uTU-Km-xk2" firstAttribute="trailing" secondItem="mw6-H4-Wg2" secondAttribute="trailing" id="nUT-Wk-tSU"/>
+                            <constraint firstItem="uTU-Km-xk2" firstAttribute="top" secondItem="OV1-vo-HXi" secondAttribute="bottom" constant="10" id="ocj-2y-fx8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="exhibitAuthorTextField" destination="2QY-Fd-lHW" id="RZm-lH-dkF"/>
+                        <outlet property="exhibitDatePicker" destination="yXE-mz-G4t" id="oiw-UG-Fbl"/>
+                        <outlet property="exhibitHallTextField" destination="veR-9I-yuf" id="qW6-Z6-rIV"/>
+                        <outlet property="exhibitImageView" destination="3U6-nN-ZDk" id="9KQ-Pq-SS8"/>
+                        <outlet property="exhibitReviewTextView" destination="dse-Tw-dUj" id="9Qx-Vs-Y0P"/>
+                        <outlet property="exhibitSlider" destination="cSS-Dp-OmN" id="VHW-Qg-8qF"/>
+                        <outlet property="exhibitTextField" destination="2QY-Fd-lHW" id="UBq-DT-kQA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGk-Df-R0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -883,10 +939,15 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-Ea-MtF">
                                 <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <items>
                                     <navigationItem title="영화 추가" id="NRx-yx-W9w">
                                         <barButtonItem key="leftBarButtonItem" title="취소" id="zMT-Ke-Arx"/>
-                                        <barButtonItem key="rightBarButtonItem" title="저장" id="Xx3-cw-JlL"/>
+                                        <barButtonItem key="rightBarButtonItem" title="저장" id="Xx3-cw-JlL">
+                                            <connections>
+                                                <action selector="SavingMovie:" destination="ehg-bH-mAM" id="EYa-5Y-NMd"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1040,6 +1101,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="이미지 선택">
                                                             <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="moviePosterButton:" destination="ehg-bH-mAM" eventType="touchUpInside" id="kq1-7X-Zkg"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -1087,7 +1151,6 @@
                     <connections>
                         <outlet property="movieDatePicker" destination="lwJ-nt-v8r" id="S5O-zS-qek"/>
                         <outlet property="movieDirectorTextField" destination="gmI-PF-7BP" id="T4h-ie-oCo"/>
-                        <outlet property="moviePosterButton" destination="FuV-hD-QTZ" id="NmX-A9-hA6"/>
                         <outlet property="moviePosterImageView" destination="ac7-3C-GpO" id="sio-BD-ok1"/>
                         <outlet property="movieRatingSlider" destination="2nV-ZI-tIA" id="UdZ-32-Y58"/>
                         <outlet property="movieReviewTextView" destination="UBf-RC-RMt" id="GHn-nY-raF"/>
@@ -1109,7 +1172,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZy-oe-4gD">
-                                <rect key="frame" x="-3" y="59" width="394" height="44"/>
+                                <rect key="frame" x="-4" y="59" width="394" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="영화 상세" id="di4-VR-8d3"/>
@@ -1136,8 +1199,17 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

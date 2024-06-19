@@ -1,8 +1,5 @@
 //
 //  SceneDelegate.swift
-//  Calander
-//
-//  Created by 남기윤 on 2024/06/15.
 //
 
 import UIKit

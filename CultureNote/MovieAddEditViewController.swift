@@ -1,8 +1,5 @@
 //
 //  MovieAddEditViewController.swift
-//  Calander
-//
-//  Created by 남기윤 on 2024/06/17.
 //
 
 import UIKit

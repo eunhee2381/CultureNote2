@@ -1,8 +1,5 @@
 //
 //  BooksAddEditViewController.swift
-//  CultureNote
-//
-//  Created by 남기윤 on 2024/06/19.
 //
 
 import UIKit
